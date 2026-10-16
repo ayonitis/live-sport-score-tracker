@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f6f3ee;
+  --foreground: #1f1c19;
+  --muted: #746d66;
+  --border: #e8e2da;
+  --accent: #e45d53;
+}
+
+* {
+  border-color: var(--border);
+}
+
+html,
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+::selection {
+  background: color-mix(in oklab, var(--accent) 25%, white);
+}

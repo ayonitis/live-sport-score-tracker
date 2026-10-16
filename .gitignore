@@ -1,0 +1,17 @@
+node_modules/
+.pnp
+.pnp.js
+.next/
+out/
+build/
+next-env.d.ts
+.env
+.env.*
+!.env.example
+npm-debug.log*
+*.log
+.DS_Store
+*.pem
+*.tsbuildinfo
+.vercel
+coverage/
