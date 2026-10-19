@@ -1,6 +1,10 @@
-import { SportPageTemplate } from "@/components/sport-page-template";
-import { getSportBySlug } from "@/lib/sports";
+import { F1Dashboard } from "@/components/f1/f1-dashboard";
+import { getF1InitialData } from "@/lib/f1/service";
 
-export default function F1Page() {
-  return <SportPageTemplate sport={getSportBySlug("f1")} />;
+export const dynamic = "force-dynamic";
+
+export default async function F1Page() {
+  const initialData = await getF1InitialData();
+
+  return <F1Dashboard initialData={initialData} />;
 }

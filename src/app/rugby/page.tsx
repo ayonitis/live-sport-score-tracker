@@ -1,6 +1,10 @@
-import { SportPageTemplate } from "@/components/sport-page-template";
-import { getSportBySlug } from "@/lib/sports";
+import { RugbyDashboard } from "@/components/rugby/rugby-dashboard";
+import { getRugbyOverviewSafe } from "@/lib/rugby/api-sports";
 
-export default function RugbyPage() {
-  return <SportPageTemplate sport={getSportBySlug("rugby")} />;
+export const dynamic = "force-dynamic";
+
+export default async function RugbyPage() {
+  const overview = await getRugbyOverviewSafe();
+
+  return <RugbyDashboard initialData={overview} />;
 }

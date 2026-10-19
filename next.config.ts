@@ -15,6 +15,10 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "img.thesports.com",
       },
+      {
+        protocol: "https",
+        hostname: "media.api-sports.io",
+      },
     ],
   },
 };
